@@ -56,7 +56,7 @@ curl http://10.0.2.15:8080
 sudo ufw status numbered
 ```
 
-### 8. Remove the block rule to restore origina; firewall state
+### 8. Remove the block rule to restore original firewall state
 ```bash
 sudo ufw delete 2
 sudo ufw delete 4
@@ -67,3 +67,22 @@ sudo ufw delete 4
 sudo ufw status numbered
 ```
 
+## Summary
+A firewall is a security tool that monitors and controls incoming and outgoing network traffic based on pre-defined rules. It acts as a barrier between trusted and untrusted networks.
+
+In this task, we used UFW (Uncomplicated Firewall) on Linux to:
+- Allow traffic on port 22 (SSH) to enable remote connections.
+
+- Block traffic on port 8080 to test access restrictions.
+
+How it filters traffic:
+
+- When a packet arrives, the firewall checks its source, destination, and port.
+
+- It compares these against the rules defined by the user.
+
+- If a rule matches, it either allows or denies the packet.
+
+- If no rule matches, the default policy (typically "deny") is applied.
+
+By modifying the firewall rules, we were able to control access to services and simulate basic network protection.
